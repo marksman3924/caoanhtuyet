@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
 
     <!-- Config Tailwind Font Family -->
     <script>
@@ -242,12 +242,12 @@
     </section>
 
     <!-- STATS SECTION -->
-    <section class="py-12 px-4 sm:px-6 border-b border-[rgba(0,0,0,0.08)] bg-[#ECEAE5] relative z-10">
+    <section id="stats-section" class="py-12 px-4 sm:px-6 border-b border-[rgba(0,0,0,0.08)] bg-[#ECEAE5] relative z-10">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div class="flex items-center gap-4 p-5 bg-[#F1F0EC] border border-[rgba(0,0,0,0.06)]" style="border-radius: 16px;">
                 <div class="bg-[#202020]/10 p-3 rounded-full shrink-0"><i data-lucide="pie-chart" class="text-[#202020]"></i></div>
                 <div>
-                    <div class="text-2xl sm:text-3xl font-semibold text-[#202020] font-serif" style="letter-spacing: -1.2px;">35-45%</div>
+                    <div class="text-2xl sm:text-3xl font-semibold text-[#202020] font-serif" style="letter-spacing: -1.2px;"><span class="stat-number" data-target="35">0</span>-45%</div>
                     <div class="text-sm text-[#4D4D4D] font-medium font-sans">Tỷ lệ tồn kho trung bình VN</div>
                     <div class="text-xs text-[#A5A5A5] mt-1 font-sans">(Benchmark: 20-25%)</div>
                 </div>
@@ -255,7 +255,7 @@
             <div class="flex items-center gap-4 p-5 bg-[#F1F0EC] border border-[rgba(0,0,0,0.06)]" style="border-radius: 16px;">
                 <div class="bg-[#202020]/10 p-3 rounded-full shrink-0"><i data-lucide="target" class="text-[#202020]"></i></div>
                 <div>
-                    <div class="text-2xl sm:text-3xl font-semibold text-[#202020] font-serif" style="letter-spacing: -1.2px;">70%</div>
+                    <div class="text-2xl sm:text-3xl font-semibold text-[#202020] font-serif" style="letter-spacing: -1.2px;"><span class="stat-number" data-target="70">0</span>%</div>
                     <div class="text-sm text-[#4D4D4D] font-medium font-sans">Quyết định theo cảm tính</div>
                     <div class="text-xs text-[#A5A5A5] mt-1 font-sans">(Survey 120+ merchandisers)</div>
                 </div>
@@ -263,7 +263,7 @@
             <div class="flex items-center gap-4 p-5 bg-[#F1F0EC] border border-[rgba(0,0,0,0.06)]" style="border-radius: 16px;">
                 <div class="bg-[#202020]/10 p-3 rounded-full shrink-0"><i data-lucide="clock" class="text-[#202020]"></i></div>
                 <div>
-                    <div class="text-2xl sm:text-3xl font-semibold text-[#202020] font-serif" style="letter-spacing: -1.2px;">4-6 giờ</div>
+                    <div class="text-2xl sm:text-3xl font-semibold text-[#202020] font-serif" style="letter-spacing: -1.2px;"><span class="stat-number" data-target="4">0</span>-6 giờ</div>
                     <div class="text-sm text-[#4D4D4D] font-medium font-sans">Thời gian report mỗi tuần</div>
                     <div class="text-xs text-[#A5A5A5] mt-1 font-sans">(Có thể giảm xuống 15 phút)</div>
                 </div>
@@ -283,7 +283,7 @@
             <!-- RESPONSIVE GRID BOX -->
             <div class="bg-[rgba(0,0,0,0.06)] p-[1px] relative overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-[1px]" style="border-radius: 16px;">
                 <!-- Flaw 1 -->
-                <div class="p-8 md:p-10 bg-[#ECEAE5] hover:bg-[#E8E7E3] transition-colors group">
+                <div class="p-8 md:p-10 bg-[#ECEAE5] group" style="transition: background 0.4s ease;" onmouseenter="this.style.background='linear-gradient(135deg, #EEEAF5 0%, #E8E4F0 100%)'" onmouseleave="this.style.background='#ECEAE5'">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="font-serif font-semibold text-lg text-[#202020] leading-tight max-w-[80%] group-hover:text-[#4D4D4D] transition-colors" style="letter-spacing: -0.5px;">ĐẦU TƯ DÀN TRẢI, KHÔNG CÓ "GÀ ĐẺ TRỨNG VÀNG"</h3>
                         <span class="text-4xl font-serif text-[#A5A5A5]/30 font-bold -mt-2 transition-colors">01</span>
@@ -291,7 +291,7 @@
                     <p class="text-sm text-[#4D4D4D] leading-relaxed font-sans">5% số mã mang về 30% doanh thu. Nhưng bạn đang chia đều ngân sách cho tất cả. Không biết mã nào cốt lõi, mã nào nên bỏ.</p>
                 </div>
                 <!-- Flaw 2 -->
-                <div class="p-8 md:p-10 bg-[#ECEAE5] hover:bg-[#E8E7E3] transition-colors group">
+                <div class="p-8 md:p-10 bg-[#ECEAE5] group" style="transition: background 0.4s ease;" onmouseenter="this.style.background='linear-gradient(135deg, #EEEAF5 0%, #E8E4F0 100%)'" onmouseleave="this.style.background='#ECEAE5'">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="font-serif font-semibold text-lg text-[#202020] leading-tight max-w-[80%] group-hover:text-[#4D4D4D] transition-colors" style="letter-spacing: -0.5px;">LÀM THEO TREND REPORT Y CHANG</h3>
                         <span class="text-4xl font-serif text-[#A5A5A5]/30 font-bold -mt-2 transition-colors">02</span>
@@ -299,7 +299,7 @@
                     <p class="text-sm text-[#4D4D4D] leading-relaxed font-sans">Màu này hot, form kia lên ngôi. Nhưng brand bạn khác, khách bạn khác. Làm y chang = giống tất cả = không có gì đặc biệt.</p>
                 </div>
                 <!-- Flaw 3 -->
-                <div class="p-8 md:p-10 bg-[#ECEAE5] hover:bg-[#E8E7E3] transition-colors group">
+                <div class="p-8 md:p-10 bg-[#ECEAE5] group" style="transition: background 0.4s ease;" onmouseenter="this.style.background='linear-gradient(135deg, #EEEAF5 0%, #E8E4F0 100%)'" onmouseleave="this.style.background='#ECEAE5'">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="font-serif font-semibold text-lg text-[#202020] leading-tight max-w-[80%] group-hover:text-[#4D4D4D] transition-colors" style="letter-spacing: -0.5px;">"CHẮC 500 CÁI LÀ ĐỦ"</h3>
                         <span class="text-4xl font-serif text-[#A5A5A5]/30 font-bold -mt-2 transition-colors">03</span>
@@ -307,7 +307,7 @@
                     <p class="text-sm text-[#4D4D4D] leading-relaxed font-sans">Không có công thức. Không có cơ cấu. Mọi con số đều là đoán. Đúng thì may, sai thì cuối mùa mới biết.</p>
                 </div>
                 <!-- Flaw 4 -->
-                <div class="p-8 md:p-10 bg-[#ECEAE5] hover:bg-[#E8E7E3] transition-colors group">
+                <div class="p-8 md:p-10 bg-[#ECEAE5] group" style="transition: background 0.4s ease;" onmouseenter="this.style.background='linear-gradient(135deg, #EEEAF5 0%, #E8E4F0 100%)'" onmouseleave="this.style.background='#ECEAE5'">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="font-serif font-semibold text-lg text-[#202020] leading-tight max-w-[80%] group-hover:text-[#4D4D4D] transition-colors" style="letter-spacing: -0.5px;">"TỒN 2 TỶ" — NHIỀU HAY ÍT?</h3>
                         <span class="text-4xl font-serif text-[#A5A5A5]/30 font-bold -mt-2 transition-colors">04</span>
@@ -315,7 +315,7 @@
                     <p class="text-sm text-[#4D4D4D] leading-relaxed font-sans">2 tỷ mà bán 500 triệu/tháng = 4 tháng hàng = thừa. 2 tỷ mà bán 1 tỷ/tháng = 2 tháng = thiếu. Cùng con số, khác hoàn toàn.</p>
                 </div>
                 <!-- Flaw 5 -->
-                <div class="p-8 md:p-10 bg-[#ECEAE5] hover:bg-[#E8E7E3] transition-colors group">
+                <div class="p-8 md:p-10 bg-[#ECEAE5] group" style="transition: background 0.4s ease;" onmouseenter="this.style.background='linear-gradient(135deg, #EEEAF5 0%, #E8E4F0 100%)'" onmouseleave="this.style.background='#ECEAE5'">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="font-serif font-semibold text-lg text-[#202020] leading-tight max-w-[80%] group-hover:text-[#4D4D4D] transition-colors" style="letter-spacing: -0.5px;">ÁO BASIC VÀ ÁO TREND — ĐỐI XỬ NHƯ NHAU</h3>
                         <span class="text-4xl font-serif text-[#A5A5A5]/30 font-bold -mt-2 transition-colors">05</span>
@@ -323,7 +323,7 @@
                     <p class="text-sm text-[#4D4D4D] leading-relaxed font-sans">Basic sống 12 tháng. Trend sống 8 tuần. Nếu cùng deadline, bạn sẽ sale nhầm mã, giữ nhầm mã, bỏ lỡ cơ hội tái sản xuất.</p>
                 </div>
                 <!-- Flaw 6 -->
-                <div class="p-8 md:p-10 bg-[#ECEAE5] hover:bg-[#E8E7E3] transition-colors group">
+                <div class="p-8 md:p-10 bg-[#ECEAE5] group" style="transition: background 0.4s ease;" onmouseenter="this.style.background='linear-gradient(135deg, #EEEAF5 0%, #E8E4F0 100%)'" onmouseleave="this.style.background='#ECEAE5'">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="font-serif font-semibold text-lg text-[#202020] leading-tight max-w-[80%] group-hover:text-[#4D4D4D] transition-colors" style="letter-spacing: -0.5px;">SALE ĐỂ ĐẨY TỒN → SALE VÌ CHƯA ĐỦ SỐ</h3>
                         <span class="text-4xl font-serif text-[#A5A5A5]/30 font-bold -mt-2 transition-colors">06</span>
@@ -332,8 +332,8 @@
                 </div>
             </div>
 
-            <div class="mt-20 text-center max-w-3xl mx-auto">
-                <div class="bg-[#202020] text-[#E8E7E3] p-8 md:p-12 relative" style="border-radius: 16px;">
+            <div class="mt-20 text-center max-w-4xl mx-auto">
+                <div class="bg-[#202020] text-[#E8E7E3] p-10 md:p-14 relative" style="border-radius: 16px;">
                     <p class="text-lg md:text-xl font-light mb-6 font-sans" style="line-height: 1.65;">"6 lỗ hổng này không mới. Nhưng ít người đặt tên cho chúng. Và càng ít người có giải pháp hệ thống."</p>
                     <p class="font-serif text-2xl md:text-3xl font-semibold text-white" style="letter-spacing: -1.2px;">The Mastery Framework ra đời để <span class="underline decoration-1 underline-offset-4">lấp đầy từng lỗ hổng</span>.</p>
                 </div>
@@ -388,7 +388,7 @@
                 </div>
 
                 <!-- OLD WAY -->
-                <div class="relative bg-[#ECEAE5] p-8 md:p-12 border border-[rgba(0,0,0,0.06)] opacity-90" style="border-radius: 16px;">
+                <div class="relative bg-[#ECEAE5] p-8 md:p-12 border border-[rgba(0,0,0,0.06)]" style="border-radius: 16px; opacity: 0.6;">
                      <div class="text-xs uppercase text-[#A5A5A5] font-sans mb-2" style="letter-spacing: 0.6px;">Reactive</div>
                      <div class="mb-6 flex items-center gap-3 opacity-60">
                         <i data-lucide="alert-triangle" class="text-[#A5A5A5]"></i>
@@ -404,7 +404,7 @@
                 </div>
 
                 <!-- NEW WAY -->
-                <div class="relative bg-[#F1F0EC] p-8 md:p-12 border border-[rgba(0,0,0,0.06)] transform md:translate-y-4 md:-translate-x-4 z-10" style="border-radius: 16px;">
+                <div class="relative p-8 md:p-12 transform md:-translate-y-2 md:-translate-x-4 z-10" style="border-radius: 16px; background: #EEEAF5; border: 1.5px solid rgba(100,80,180,0.15); box-shadow: 0 8px 32px rgba(100,80,180,0.08);">
                     <p class="text-xs uppercase text-[#A5A5A5] font-sans mb-2" style="letter-spacing: 0.6px;">Proactive</p>
                     <div class="mb-6 flex items-center gap-3">
                         <i data-lucide="check-circle-2" class="text-[#202020]"></i>
@@ -493,7 +493,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="bg-[#ECEAE5] p-8 relative border border-[rgba(0,0,0,0.06)]" style="border-radius: 16px;">
+                <div class="p-8 relative border border-[rgba(100,80,180,0.12)]" style="border-radius: 16px; background: #EEEAF5;">
                     <p class="text-xs uppercase text-[#A5A5A5] mb-4 font-sans" style="letter-spacing: 0.6px;">Philosophy</p>
                     <p class="text-lg font-serif text-[#202020]" style="line-height: 1.65;">"Tôi tin vào <span class="font-semibold">learning by doing</span>. Workshop này không có lý thuyết dài dòng — chỉ có framework + tools + practice với data thật."</p>
                 </div>
@@ -782,14 +782,14 @@
                <div class="group h-[550px] perspective-1000">
                   <div class="flip-card-inner">
                      <!-- FRONT -->
-                     <div class="absolute inset-0 h-full w-full bg-[#ECEAE5] border border-[rgba(0,0,0,0.06)] p-8 flex flex-col backface-hidden transition-shadow" style="border-radius: 16px;">
+                     <div class="absolute inset-0 h-full w-full bg-[#F1F0EC] border border-[rgba(0,0,0,0.06)] p-8 flex flex-col backface-hidden transition-shadow" style="border-radius: 16px;">
                         <p class="text-[10px] uppercase text-[#A5A5A5] font-sans mt-2" style="letter-spacing: 0.6px;">${card.label}</p>
                         <div class="mt-6 mb-6">
-                           <div class="w-12 h-12 bg-[#F1F0EC] rounded-full flex items-center justify-center mb-6 text-[#202020]">
+                           <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 text-[#202020]" style="background: rgba(255,255,255,0.6);">
                               <i data-lucide="${card.icon}" class="w-6 h-6"></i>
                            </div>
                            <h3 class="text-xl font-semibold text-[#202020] font-serif mb-4 leading-snug" style="letter-spacing: -0.5px;">${card.title}</h3>
-                           <div class="bg-[#F1F0EC] p-4 text-xs text-[#4D4D4D] mb-6 leading-relaxed font-sans" style="border-radius: 12px;">
+                           <div class="p-4 text-xs text-[#4D4D4D] mb-6 leading-relaxed font-sans" style="border-radius: 12px; background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(238,234,245,0.5)); backdrop-filter: blur(4px);">
                               ${card.quote}<br/><span class="font-medium not-italic text-[#202020] mt-2 block">— ${card.author}</span>
                            </div>
                            <ul class="space-y-3 text-sm text-[#4D4D4D] font-sans">${painPointsHTML}</ul>
@@ -803,10 +803,10 @@
                         </div>
                      </div>
                      <!-- BACK -->
-                     <div class="absolute inset-0 h-full w-full bg-[#ECEAE5] border border-[rgba(0,0,0,0.06)] p-8 flex flex-col rotate-y-180 backface-hidden" style="border-radius: 16px;">
+                     <div class="absolute inset-0 h-full w-full border border-[rgba(0,0,0,0.06)] p-8 flex flex-col rotate-y-180 backface-hidden" style="border-radius: 16px; background: #EEEAF5;">
                         <p class="text-[10px] uppercase text-[#A5A5A5] font-sans mt-2" style="letter-spacing: 0.6px;">Framework Fix</p>
                         <div class="mt-8 space-y-6 flex-grow font-sans">${solutionsHTML}</div>
-                        <div class="mt-auto pt-6 border-t border-[rgba(0,0,0,0.06)] bg-[#F1F0EC] p-4" style="border-radius: 12px;">
+                        <div class="mt-auto pt-6 border-t border-[rgba(0,0,0,0.06)] p-4" style="border-radius: 12px; background: rgba(255,255,255,0.6);">
                            <p class="text-[10px] uppercase text-[#A5A5A5] mb-2 flex items-center gap-1 font-sans" style="letter-spacing: 0.6px;">Kết quả kỳ vọng <i data-lucide="check" class="w-3 h-3"></i></p>
                            <div class="text-sm font-medium text-[#202020] leading-relaxed whitespace-pre-line font-sans">${card.result}</div>
                         </div>
@@ -924,12 +924,49 @@
             document.querySelectorAll('.module-card').forEach(el => observer.observe(el));
         }
 
+        // --- STATS COUNT-UP ANIMATION ---
+        function animateCountUp() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(el => {
+                const target = parseInt(el.dataset.target);
+                const duration = 1600;
+                const startTime = performance.now();
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    // cubic ease-out: 1 - (1-t)^3
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    el.textContent = Math.round(eased * target);
+                    if (progress < 1) requestAnimationFrame(update);
+                }
+                requestAnimationFrame(update);
+            });
+        }
+
+        function initStatsObserver() {
+            const statsSection = document.getElementById('stats-section');
+            if (!statsSection) return;
+            let fired = false;
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !fired) {
+                        fired = true;
+                        animateCountUp();
+                        observer.unobserve(statsSection);
+                    }
+                });
+            }, { threshold: 0.3 });
+            observer.observe(statsSection);
+        }
+
         // --- INITIALIZATION ---
         document.addEventListener('DOMContentLoaded', () => {
             renderFramework();
             renderFlipCards();
             renderRoadmap();
             lucide.createIcons();
+            initStatsObserver();
         });
     </script>
 </body>
